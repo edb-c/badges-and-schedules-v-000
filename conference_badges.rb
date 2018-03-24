@@ -21,10 +21,11 @@ Write a method called assign_rooms that takes the list of speakers and assigns e
 =end
 def assign_rooms(array)
   array_name_roomnums = []
-	array.each_with_index.map do |name, index| 
-		array_name_roomnums[index] = ("Hello, #{name}! You'll be assigned to room #{index + 1}")
-		return "Hello, #{name}! You'll be assigned to room #{index + 1}"
-	end
+  index1 = 0
+	array.each_with_index { |name, index| 
+		array_name_roomnums[index1] = ("Hello, #{name}! You'll be assigned to room #{index + 1}")
+		index1 += 1
+	}
 	return array_name_roomnums
 end
 
@@ -35,17 +36,17 @@ Create a method called printer that will output first the results of the batch_b
 
 def printer(speakers)
   
-  index = 0
-  
-  batch_badge_creator(speakers).each {|name|
-  puts batch_badge_creator(speakers)[index]
-  index += 1
-  }
   index2 = 0
   
-  assign_rooms(speakers).each {|rooms|
-  puts assign_rooms(speakers)[index2]
+  batch_badge_creator(speakers).each {|name|
+  puts batch_badge_creator(speakers)[index2]
   index2 += 1
+  }
+  index3 = 0
+  
+  assign_rooms(speakers).each {|rooms|
+  puts assign_rooms(speakers)[index3]
+  index3 += 1
   }
 end
 
