@@ -23,7 +23,7 @@ def assign_rooms(array)
   array_name_roomnums = []
   index1 = 0
 	array.each_with_index { |name, index| 
-		array_name_roomnums[index1] = ("Hello, #{name}! You'll be assigned to room #{index + 1}")
+		array_name_roomnums[index1] = ("Hello, #{name}! You'll be assigned to room #{index + 1}!")
 		index1 += 1
 	}
 	return array_name_roomnums
